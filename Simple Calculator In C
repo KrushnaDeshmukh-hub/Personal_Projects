@@ -1,0 +1,44 @@
+
+#include <stdio.h>
+
+int main()
+{
+  double a, b;
+  char operation_type ;
+  double result;
+ 
+  printf("Put Value of First Number : ");
+    scanf("%lf",&a);
+
+  printf("Put Value of Second Number : ");
+    scanf("%lf",&b);
+    
+  printf("Put The Opparation That You Want To Be done On Those Numbers ");
+    scanf(" %c",&operation_type);
+    
+  switch (operation_type){
+    case '+':
+        result = a+b;
+      printf("The Sum Of Numbers Is : %lf", result);
+        break ;
+    case '-':
+        result = a-b;
+      printf("The Difference Of Numbers Is : %lf",result);
+        break ;
+    case '*':
+        result = a*b;
+      printf("The Multiplication Of Numbers Is : %lf",result);
+        break ;
+    case '/':
+    if (b==0){
+            printf("Error: Can't Divide By Zero");
+        break;
+  } else {
+        result = a/b;
+      printf("The Ratio Of Numbers Is : %lf",result);
+        break ;
+  } default :
+       printf("Invalid Oparation");
+  }
+    return 0;
+}
