@@ -1,0 +1,44 @@
+
+#include <iostream>
+using namespace std;
+int main()
+{
+  double a, b;
+  char operation_type ;
+  double result;
+ 
+  cout<< "Put Value of First Number : "<< endl;
+    cin>>a;
+
+  cout<< "Put Value of Second Number : "<< endl;
+    cin>>b;
+    
+  cout << "Put The Opparation That You Want To Be done On Those Numbers " << endl;
+    cin>> operation_type;
+    
+  switch (operation_type){
+    case '+':
+        result = a+b;
+      cout<< "The Sum Of Numbers Is : "<< result <<endl;
+        break ;
+    case '-':
+        result = a-b;
+      cout<< "The Difference Of Numbers Is : "<< result <<endl;
+        break ;
+    case '*':
+        result = a*b;
+      cout<< "The Multiplication Of Numbers Is : "<< result <<endl;
+        break ;
+    case '/':
+    if (b==0){
+            cout << "Error: Can't Divide By Zero"<< endl;
+        break;
+  } else {
+        result = a/b;
+      cout<< "The Ratio Of Numbers Is : "<< result <<endl;
+        break ;
+  } default :
+       cout<< "Invalid Oparation" << endl;
+  }
+    return 0;
+}
