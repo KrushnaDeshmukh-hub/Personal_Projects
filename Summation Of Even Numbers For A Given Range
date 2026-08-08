@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std ;
 
@@ -9,12 +10,15 @@ int main()
   int end;
   cout << "Enter Ending Point Of Range: ";
   cin >> end;
+  
   int total = 0;
  for(int i=start ;i<=end ;i ++){
      if (i%2 == 0){
          total = total + i;
-     }
+     }}
+ if (end < start){
+     cout << "ayyee , trying to to go backwards? sad to inform , but can't do that here";
  }
-  cout << "The Summation Of Even Numbers In The Given Range Is: " << total ;
-    return 0;
+  else {cout << "The Summation Of Even Numbers In The Given Range Is: " << total ;
+    return 0;}
 }
