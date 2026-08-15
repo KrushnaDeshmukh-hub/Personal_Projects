@@ -1,6 +1,6 @@
 
-
 #include <iostream>
+#include <iomanip>
 using namespace std ;
 
 int main()
@@ -8,7 +8,8 @@ int main()
 	int matrix [3][3];
 	int i;
 	int j;
-
+    int n;
+    
 	for ( i=0 ; i<3; i++)  {                            // i is for row
 		for ( j=0; j<3; j++)  {                          //j is for column
 			cout<< "enter value for place ("<< i<<","<<j<< ")"<< endl;
@@ -16,9 +17,19 @@ int main()
 
 		}
 	}
+	int max = matrix[0][0];
+
+	for ( i=0 ; i<3; i++)  {                            // i is for row
+		for ( j=0; j<3; j++) { 
+	
+		if(max<matrix[i][j])  {
+			max = matrix[i][j];}}}
+			
+	int digits= to_string(max).length();
 	for ( i=0 ; i<3; i++)  {
 		for ( j=0; j<3; j++)  {
-			cout <<"| "<< matrix[i][j]<<"|" ;
+		  
+			cout <<"|"<< setw(digits)<< matrix[i][j]<<"|" ;
 		}
 		cout << endl;
 	}
