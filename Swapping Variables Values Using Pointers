@@ -1,0 +1,21 @@
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x = 10 ;
+  int y = 99;
+  int z=0;
+    
+   int *p = &x ;
+   int *q = &y ;
+   int *temp = &z ;
+
+    *temp = *p ;
+    *p=*q;
+    *q=*temp;
+  cout << "x = "<<*p<< endl << "y = "<< *q ;   
+
+    return 0;
+}
