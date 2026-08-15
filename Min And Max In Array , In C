@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+
+int main()
+{
+	int m;
+	printf("input the numbers of elements you want in list/arrey : ");
+	scanf ("%d",&m);
+	int list[m];
+
+	for (int i=0; i<m; i++)  {
+		printf("put the values of each place of the arrey : ");
+		scanf("%d", &list[i]);
+	}
+	int max = list [0];
+	int min = list [0];
+
+	for (int i=0; i<m; i++) {
+		if(max<list[i])  {
+			max = list[i];
+		}
+		if(min>list[i])  {
+			min = list[i];
+		}
+	}
+
+	printf("the maximum of the list is : %d \n", max );
+
+
+	printf("the minimum of the list is : %d ",min);
+
+	return 0;
+}
